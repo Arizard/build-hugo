@@ -20,7 +20,18 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Build Hugo
-      uses: lowply/build-hugo@v0.161.1
+      uses: arizard/build-hugo@v0.161.1
+
+```
+### Installing NPM Packages
+
+Update the _Build Hugo_ step to pass `install-npm-packages: true`. The action will run `npm i` inside your hugo project directory. This is useful for Hugo features like PostCSS.
+
+```yaml
+- name: Build Hugo
+  uses: arizard/build-hugo@v0.161.1
+  with:
+    install-npm-packages: true
 ```
 
 ### Versioning
@@ -29,7 +40,7 @@ The Build Hugo version aligns with [Hugo's releases](https://github.com/gohugoio
 
 ```yaml
     - name: Build Hugo
-      uses: lowply/build-hugo@v0.68.3
+      uses: arizard/build-hugo@v0.68.3
 ```
 
 > [!WARNING]
@@ -40,7 +51,7 @@ The Build Hugo version aligns with [Hugo's releases](https://github.com/gohugoio
 To run it locally, use the following command:
 
 ```
-docker run --rm -w /tmp -v $(pwd):/tmp lowply/build-hugo:v0.161.1
+docker run --rm -w /tmp -v $(pwd):/tmp arizard/build-hugo:v0.161.1
 ```
 
 ## Development
