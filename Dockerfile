@@ -5,4 +5,4 @@ ADD https://github.com/gohugoio/hugo/releases/download/v0.161.1/hugo_extended_0.
 RUN dpkg -i /tmp/hugo_extended_0.161.1_linux-amd64.deb
 COPY build.sh /build.sh
 RUN chmod +x /build.sh
-ENTRYPOINT ["build.sh"]
+ENTRYPOINT ["/build.sh"]
