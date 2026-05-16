@@ -1,9 +1,16 @@
 name: 'Build Hugo'
-author: 'Sho Mizutani <lowply@github.com>'
+author: 'Sho Mizutani <lowply@github.com>, Arie Oldman <arie@less.coffee>'
 description: 'Run the hugo command to build a website'
+inputs:
+  install-node:
+    description: 'Install Node.js (e.g. for PostCSS)'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+  - ${{ inputs.install-node }}
 branding:
   icon: 'code'
   color: 'purple'
