@@ -3,7 +3,7 @@
 A GitHub Action for building [Hugo](https://gohugo.io/) sites.
 
 - Utilizes [Hugo extended version 0.161.1](https://github.com/gohugoio/hugo/releases/tag/v0.161.1)
-- Based on [debian:bookworm-slim](https://hub.docker.com/_/debian/)
+- Based on node:26-bookworm-slim
 
 ## Usage
 
